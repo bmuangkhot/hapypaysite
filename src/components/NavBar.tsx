@@ -9,11 +9,13 @@ export const NavBar = () => {
     <header className="sticky top-0 z-40 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-amber-200 dark:border-gray-800">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
-          <img 
-            src="/lovable-uploads/d29133b0-7604-47ac-9ce0-0b4d8c5f012e.png" 
-            alt="HappyPay Logo" 
-            className="h-10 w-auto"
-          />
+          <div className="h-12 w-12 rounded-full bg-amber-500 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/d29133b0-7604-47ac-9ce0-0b4d8c5f012e.png" 
+              alt="HappyPay Logo" 
+              className="h-10 w-auto"
+            />
+          </div>
           <span className="text-xl font-bold">HappyPay</span>
         </div>
         
