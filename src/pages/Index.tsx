@@ -190,12 +190,13 @@ const Index = () => {
                 if (!chatOpen) {
                   toast({
                     title: "Chat Assistant",
-                    description: "How can I help you today?",
+                    description: "Ask me anything about our services!",
                   });
                 }
               }}
             >
               <MessageCircle size={24} className="text-white" />
+              <span className="sr-only">Ask me</span>
             </Button>
           </DrawerTrigger>
           <DrawerContent className="h-[70vh] max-w-md mx-auto rounded-t-xl">

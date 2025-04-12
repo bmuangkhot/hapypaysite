@@ -16,7 +16,7 @@ interface ChatBotProps {
 export const ChatBot: React.FC<ChatBotProps> = ({ onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
-      content: "Hi there! I'm your FinPay assistant. How can I help you today?",
+      content: "Hi there! I'm your HappyPay assistant. How can I help you today?",
       isBot: true,
     },
   ]);
@@ -76,7 +76,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ onClose }) => {
       <div className="border-b p-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Bot className="text-primary h-5 w-5" />
-          <h3 className="font-semibold">FinPay Assistant</h3>
+          <h3 className="font-semibold">HappyPay Assistant</h3>
         </div>
         <Button variant="ghost" size="sm" onClick={onClose}>
           Close
@@ -113,7 +113,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ onClose }) => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Type your message..."
+            placeholder="Ask me..."
             className="flex-1"
           />
           <Button onClick={handleSend} disabled={!input.trim()}>
