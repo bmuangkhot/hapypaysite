@@ -16,7 +16,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
   color
 }) => {
   return (
-    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-white/90 dark:bg-gray-800/90">
       <CardContent className="pt-6">
         <div className={`rounded-full ${color} w-16 h-16 flex items-center justify-center mb-4 mx-auto`}>
           {icon}
