@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CTASection } from "@/components/CTASection";
 import { ChatBotWidget } from "@/components/ChatBotWidget";
+import { ContactForm } from "@/components/ContactForm";
 import { Wallet, UsersIcon, CreditCard } from "lucide-react";
 
 const Index = () => {
@@ -60,6 +61,9 @@ const Index = () => {
       
       {/* How It Works */}
       <HowItWorks />
+      
+      {/* Contact Form */}
+      <ContactForm />
       
       {/* CTA Section */}
       <CTASection />
