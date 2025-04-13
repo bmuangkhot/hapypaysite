@@ -25,7 +25,7 @@ export const CTASection: React.FC = () => {
         
         {/* Mobile App Download Section */}
         <div className="mt-12 max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold mb-4">Get the FinPay Mobile App</h3>
+          <h3 className="text-xl font-bold mb-4">Get the HappyPay Mobile App</h3>
           <p className="mb-6 opacity-90">Access your finances anytime, anywhere with our mobile application</p>
           
           <div className="flex flex-wrap justify-center gap-4">
