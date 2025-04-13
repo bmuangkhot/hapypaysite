@@ -1,8 +1,16 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Wallet } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Footer = () => {
+  const [showContactForm, setShowContactForm] = useState(false);
+  
+  const toggleContactForm = () => {
+    setShowContactForm(!showContactForm);
+  };
+
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4 md:px-6">
@@ -57,7 +65,17 @@ export const Footer = () => {
               <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">Careers</a></li>
               <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">Press Kit</a></li>
               <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">Blog</a></li>
-              <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">Contact</a></li>
+              <li>
+                <div className="mt-2">
+                  <Button 
+                    onClick={toggleContactForm} 
+                    className="w-full bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white"
+                    size="sm"
+                  >
+                    {showContactForm ? "Hide Contact Form" : "Contact Us"}
+                  </Button>
+                </div>
+              </li>
             </ul>
           </div>
           
@@ -72,6 +90,13 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+        
+        {/* Contact Form (conditionally rendered) */}
+        {showContactForm && (
+          <div className="mt-8">
+            <ContactForm />
+          </div>
+        )}
         
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-6 text-center text-sm text-gray-600 dark:text-gray-400">
           <p>© 2025 FinPay. All rights reserved.</p>

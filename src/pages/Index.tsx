@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { NavBar } from "@/components/NavBar";
 import { FeatureSection } from "@/components/FeatureSection";
 import { Footer } from "@/components/Footer";
@@ -7,13 +7,9 @@ import { HeroSection } from "@/components/HeroSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CTASection } from "@/components/CTASection";
 import { ChatBotWidget } from "@/components/ChatBotWidget";
-import { ContactForm } from "@/components/ContactForm";
 import { Wallet, UsersIcon, CreditCard } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const [showContactForm, setShowContactForm] = useState(false);
-  
   // Features data for our reusable component
   const features = [
     {
@@ -35,10 +31,6 @@ const Index = () => {
       color: "bg-yellow-500 dark:bg-yellow-600",
     },
   ];
-  
-  const toggleContactForm = () => {
-    setShowContactForm(!showContactForm);
-  };
   
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-amber-100 via-amber-200 to-amber-100 dark:from-gray-900 dark:via-amber-900/30 dark:to-gray-800">
@@ -68,23 +60,6 @@ const Index = () => {
       
       {/* How It Works */}
       <HowItWorks />
-      
-      {/* Contact Form Button */}
-      <section className="py-12 bg-amber-50/80 dark:bg-gray-900/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2>
-          <Button 
-            onClick={toggleContactForm} 
-            className="bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg shadow-md"
-            size="lg"
-          >
-            {showContactForm ? "Hide Contact Form" : "Contact Us"}
-          </Button>
-          
-          {/* Conditionally render the contact form */}
-          {showContactForm && <ContactForm />}
-        </div>
-      </section>
       
       {/* CTA Section */}
       <CTASection />
